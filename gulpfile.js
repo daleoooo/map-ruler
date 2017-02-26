@@ -8,7 +8,7 @@ gulp.task('clean', () => {
 });
 
 gulp.task('build', ['clean'], () => {
-    return gulp.src('./index.js')
+    return gulp.src(['./index.js', './rules/**/*.js'])
         .pipe(babel())
         .pipe(gulp.dest('dist'));
 });
